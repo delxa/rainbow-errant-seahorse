@@ -4,6 +4,10 @@
   "description": "The Code Test",
   "main": "index.js",
   "author": "Matt Bell",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/delxa/rainbow-errant-seahorse.git"
+  },
   "scripts": {
     "start": "node index",
     "test": "node ./node_modules/vows/bin/vows --spec ./test/*"
@@ -12,12 +16,12 @@
   "dependencies": {
     "babel-polyfill": "^6.23.0",
     "babel-register": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "express-session": "^1.15.2"
   },
   "devDependencies": {
-    "babel-preset-es2015": "^6.24.1",
     "vows": "^0.8.1"
   }
 }
