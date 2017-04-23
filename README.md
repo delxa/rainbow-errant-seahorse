@@ -1,5 +1,6 @@
-Seek Code Test
+Code Test
 ===================
+matt@mattbell.name
 
 Introduction
 --------------
@@ -37,7 +38,6 @@ Been able to get pretty close to what was detailed in the `seek-store.md` in ter
     let total = co.total()
 
 
-
 ### Pricing Rule Schema
 You can check this out in `data/rules.json`  Given the requirements, I was able to synthesize discount rules down to two main types:
 
@@ -46,7 +46,7 @@ You can check this out in `data/rules.json`  Given the requirements, I was able 
 
 
 #### Price Schema Examples
-Here are some examples of price:
+Here are some examples of price rules:
 
 The customer is offered a discount on a particular Ad type, irrespective of quantity:
     
@@ -95,8 +95,9 @@ The customer is offered multiple price breaks on a particular Ad type:
       ]
     }
 
+
 #### Unit Schema Examples
-Here are some examples of price:
+Here are some examples of unit rules:
 
 The customer is offered a 3 for the price of 2 deal on Classic Ads:
     
@@ -117,6 +118,7 @@ The customer is offered a 3 for the price of 2 deal on Classic Ads but to a maxi
       limit: 5
     }
 
+
 ### Unit Testing
 
 This solution has Unit Tests written using Vows.js.  This is similar in many ways to Mocha, however, allows tests to be executed in parallel. This is the first time I've used Vows so i was interested to evaluate it's strengths and weaknesses.
@@ -127,9 +129,11 @@ This solution has Unit Tests written using Vows.js.  This is similar in many way
 - 03-advanced-tests are designed to try and break the rules a little and cover some more edge cases
 - Run `npm test` to execute the suite.
 
+
 ### Server-side Implementation
 
 For the purpose of this, I've written a quick Express App that implements the Checkout library on a bunch of endpoints designed to power a front-end app.  I've dropped in express-session to maintain the items and active customer rules and use these when each of the routes re-instantiate the Checkout library.
+
 
 #### Endpoints
 
@@ -138,10 +142,13 @@ For the purpose of this, I've written a quick Express App that implements the Ch
 - POST `/api/checkout/items` Add a to product to cart. Payload: JSON representation of the product to add
 - GET `/api/checkout/switch/{customerName}` Changes the active rule set to that of the named customer
 - GET `/api/checkout/total` Gets the total of the current items in cart, less any discounts
-- 
+- GET `/api/checkout/destroy` Wipes the session, removing items and rules, so that you can start afresh.
 
 
-### Server-side Implementation
+### Front-end Implementation
 
+Given that I'm interviewing for a front-end position, might have been prudent to demonstrate this option instead.  Here's a couple of points:
 
-
+- The above class will work on the front-end and is possibly most useful for use with Angular, wrapped as a service.
+- In a React environment, the checkout logic would have been implemented using a Reducer in Redux. The brief was rather prescriptive in terms of implementation so I decided not to depart from that convention. The inner logic of the pricing though would still be the same.
+- Happy to demonstrate other projects i've worked on that have more of the front end side.
