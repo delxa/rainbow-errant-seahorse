@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "description": "The Code Test",
   "main": "index.js",
-  "author": "Matt Bell | matt@mattbell.name",
+  "author": "Matt Bell",
   "scripts": {
     "start": "node index",
     "test": "node ./node_modules/vows/bin/vows --spec ./test/*"
   },
-  "author": "Matt Bell",
   "license": "ISC",
   "dependencies": {
     "babel-polyfill": "^6.23.0",
+    "babel-register": "^6.24.1",
     "body-parser": "^1.17.1",
     "express": "^4.15.2",
     "express-session": "^1.15.2"
