@@ -1,0 +1,99 @@
+{
+  "Unilever": {
+    "rules": [
+      {
+        "ruleType": "unit",
+        "adType": "classic",
+        "qty": 3,
+        "discountedUnits": 1
+      }
+    ]
+  },
+  "Apple": {
+    "rules": [
+      {
+        "ruleType": "price",
+        "adType": "standout",
+        "breaks": [
+          {
+            "qty": 0,
+            "price": 299.99
+          }
+        ]
+      }
+    ]
+  },
+  "Nike": {
+    "rules": [
+      {
+        "ruleType": "price",
+        "adType": "premium",
+        "breaks": [
+          {
+            "qty": 4,
+            "price": 379.99
+          }
+        ]
+      }
+    ]
+  },
+  "Ford": {
+    "rules": [
+      {
+        "ruleType": "unit",
+        "adType": "classic",
+        "qty": 5,
+        "discountedUnits": 1
+      },
+      {
+        "ruleType": "price",
+        "adType": "standout",
+        "breaks": [
+          {
+            "qty": 0,
+            "price": 309.99
+          }
+        ]
+      },
+      {
+        "ruleType": "price",
+        "adType": "premium",
+        "breaks": [
+          {
+            "qty": 3,
+            "price": 389.99
+          }
+        ]
+      }
+    ]
+  },
+  "Amazon": {
+    "rules": [
+      {
+        "ruleType": "price",
+        "adType": "standout",
+        "breaks": [
+          {
+            "qty": 0,
+            "price": 309.99
+          },
+          {
+            "qty": 5,
+            "price": 299.99
+          },
+          {
+            "qty": 10,
+            "price": 290.99
+          }
+        ]
+      },
+      {
+        "ruleType": "unit",
+        "adType": "classic",
+        "qty": 10,
+        "discountedUnits": 2,
+        "limit": 4
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "seektest",
+  "version": "1.0.0",
+  "description": "The Code Test for Seek Learning",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "test": "node ./node_modules/vows/bin/vows --spec ./test/*"
+  },
+  "author": "Matt Bell",
+  "license": "ISC",
+  "dependencies": {
+    "babel-polyfill": "^6.23.0",
+    "body-parser": "^1.17.1",
+    "express": "^4.15.2",
+    "express-session": "^1.15.2"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "vows": "^0.8.1"
+  }
+}
