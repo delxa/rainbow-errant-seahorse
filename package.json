@@ -1,8 +1,9 @@
 {
-  "name": "seektest",
+  "name": "slcodetest",
   "version": "1.0.0",
-  "description": "The Code Test for Seek Learning",
+  "description": "The Code Test",
   "main": "index.js",
+  "author": "Matt Bell | matt@mattbell.name",
   "scripts": {
     "start": "node index",
     "test": "node ./node_modules/vows/bin/vows --spec ./test/*"

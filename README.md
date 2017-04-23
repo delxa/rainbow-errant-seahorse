@@ -1,6 +1,6 @@
 Code Test
 ===================
-matt@mattbell.name
+Matt Bell | matt@mattbell.name
 
 Introduction
 --------------
@@ -10,13 +10,14 @@ Hi there and thanks for your consideration. This README describes a backend-ish 
 Getting it Running
 -------------------
 
-This is a JS solution so you'll need Node.js (targeting v6.3.0) and NPM setup on your machine.
+This is a JS solution so you'll need Node.js (4.3.0 >) and NPM setup on your machine.
 
 1. `git clone https://github.com/delxa/rainbow-errant-seahorse` to grab the source
 2. `npm install` to grab dependencies
-3. `npm test` to run Unit Tests against the Checkout Class
-4. `npm start` will spin up the API on localhost:9000
+3. `npm test` to run Unit Tests against the `Checkout` Class
+4. `npm start` will spin up the API on `localhost:9000`
 
+Note: Using a bit of Babel behind the scenes to handle the new import/export syntax. This runs in Node 4.3.0 and up.
 
 Solution
 ---------------
@@ -24,7 +25,7 @@ Solution
 Majority of effort put into this was around the Checkout Class, Pricing Rule Schema and associated Unit Tests.  I've done a very basic Express-based API to demonstrate how the Checkout Class could be used in a backend context.
 
 ### Checkout Class
-`Checkout` is an ES6 Class handling the cart manipulation, totaling and implementation of the per-client pricing rules.  It is instanced with the pricing rules for a particular client and can optionally accept an array of existing items. The latter is useful when the items are being pulled from session stores (cookie, redis, etc)
+`Checkout` is an ES6 Class handling the cart manipulation, totaling and implementation of the per-client pricing rules. It is instantiated with the pricing rules for a particular client and can optionally accept an array of existing items. The latter is useful when the items are being pulled from session stores (cookie, redis, etc)
 
 #### Implementing the Class
 
@@ -115,7 +116,7 @@ The customer is offered a 3 for the price of 2 deal on Classic Ads but to a maxi
       "adType": "classic",
       "qty": 3,
       "discountedUnits": 1,
-      limit: 5
+      "limit": 5
     }
 
 
